@@ -25,16 +25,23 @@
         ]);
 
         var options = {
-          timeline: { groupByRowLabel: false }
+          timeline: { 
+            groupByRowLabel: true,
+            hAxis: 
+            { 
+              minValue: new Date(2009, 0, 0),
+              maxValue: new Date(2021, 0, 0)
+            } 
+          }
         };
 
-        chart.draw(dataTable);
+        chart.draw(dataTable, options);
       }
     </script>
 
   </head>
   <body>
     <h3 id="timelineHeader" style="text-align: center; text-decoration: underline; font-family: roboto; text-transform: uppercase;">Matt Joers Career Timeline</h3>
-    <div id="jobTimeline" style="height: 250px;"></div>
+    <div id="jobTimeline" style="height: 350px;"></div>
   </body>
 </html>
